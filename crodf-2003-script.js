@@ -10,8 +10,8 @@ window.addEventListener( "pageshow", function ( event ) {
 /* URL Test/Dev Variables */
 var windowHref = window.location.href;
 //console.log('windowHref ' + windowHref);
-if(windowHref.indexOf('develop.myrugiet.club') > -1){
-    urlTarget = 'https://develop.myrugiet.club';
+if(windowHref.indexOf('develop.test.club') > -1){
+    urlTarget = 'https://develop.mytest.club';
     questionTargetFirst = 1;
     questionTargetSecond = 7;
     questionTargetLast = 75;
@@ -33,8 +33,8 @@ if(windowHref.indexOf('develop.myrugiet.club') > -1){
         {"question": 75,"step": 23,"tracker": 15}
     ];
 }
-else if(windowHref.indexOf('members.rugiet.com') > -1){
-    urlTarget = 'https://members.rugiet.com';
+else if(windowHref.indexOf('members.test.com') > -1){
+    urlTarget = 'https://members.test.com';
     questionTargetFirst = 3;
     questionTargetSecond = 18;
     questionTargetLast = 54;
@@ -133,9 +133,9 @@ function waitForElm(selector) {
 function createTest2003(){
     var bodyInterval = setInterval(function () {
         var bodyEle = document.querySelector('body');
-        if (!bodyEle.classList.contains('spz_rugiet_2003')) {
+        if (!bodyEle.classList.contains('spz_test_2003')) {
             clearInterval(bodyInterval);
-            bodyEle.classList.add('spz_rugiet_2003');
+            bodyEle.classList.add('spz_test_2003');
             let pathname = window.location.pathname;
             var variantpageexist = 0;
             //console.log('pathname: '+pathname);
@@ -202,7 +202,7 @@ function userDemographicStep2(){
 function enableLoader(){
     var bodyEle = document.querySelector('body');
     var loaderhtml = `
-    <div class="spz_rugiet_2003_loader">
+    <div class="spz_test_2003_loader">
         <span class="loader"></span>
     </div>
     `;
@@ -303,7 +303,7 @@ function userQuestionnairesStep2Process(){
         document.body.classList.add('spzStep'+stepNumber);
         var trackerStyleHTML = `
         <style id="progressTrackerStyle">
-        .spz_rugiet_2003.spzStep${stepNumber} .checkout-progress__bar{
+        .spz_test_2003.spzStep${stepNumber} .checkout-progress__bar{
             width:${trackerPixel}px !important;
         }
         </style>`;
@@ -315,9 +315,9 @@ function userQuestionnairesStep2Process(){
                 var qC2Item = document.querySelector('#user_answer_form #radiogroup_store_questionnaires_question_'+questionTargetLast+' li:nth-child(2)'); 
                 var preCheckLastQuestion = localStorage.getItem("allQuestionsDone");
                 //console.log('allQuestionsDone: ' + preCheckLastQuestion);
-                if(qC2Item.classList.contains('!bg-rugietmustard') && !preCheckLastQuestion){
+                if(qC2Item.classList.contains('!bg-testmustard') && !preCheckLastQuestion){
                     clearInterval(answerCheckInterval);
-                    qC2Item.classList.remove('!bg-rugietmustard');
+                    qC2Item.classList.remove('!bg-testmustard');
                     var qC2Input = document.querySelector('#user_answer_form #radiogroup_store_questionnaires_question_'+questionTargetLast+' li:nth-child(2) input'); 
                     qC2Input.removeAttribute('checked');
                     qC2Input.checked = false;
@@ -368,28 +368,28 @@ function cartStep4Process(){
         //console.log('spzStep4 detected');
         localStorage.setItem("pageTracking", 4);
         document.body.classList.add('spzStep4');
-        var titleHeading = document.querySelector('.spz_rugiet_2003.spzStep4 [data-step="quantity_selection"] > .relative > .font-termina.font-bold');
+        var titleHeading = document.querySelector('.spz_test_2003.spzStep4 [data-step="quantity_selection"] > .relative > .font-termina.font-bold');
         titleHeading.textContent = 'How many doses do you want?';
         /* Labels Update */
-        var quantity2 = document.querySelector('.spz_rugiet_2003.spzStep4 [data-step="quantity_selection"] label[for="store_order_line_items_attributes_quantity_2"]');
+        var quantity2 = document.querySelector('.spz_test_2003.spzStep4 [data-step="quantity_selection"] label[for="store_order_line_items_attributes_quantity_2"]');
         var labelText2 = quantity2.querySelector('input ~ .items-start .text-base');
         labelText2.textContent = '12 doses per month';
         labelText2.classList.add('spz_font');
         var labelMonthParent2 = quantity2.querySelector('.frequency-card > .flex .items-end:nth-child(2) > .items-end .per-month-label:nth-child(1)');
         labelMonthParent2.textContent = '2 Packs';
-        var quantity3 = document.querySelector('.spz_rugiet_2003.spzStep4 [data-step="quantity_selection"] label[for="store_order_line_items_attributes_quantity_3"]');
+        var quantity3 = document.querySelector('.spz_test_2003.spzStep4 [data-step="quantity_selection"] label[for="store_order_line_items_attributes_quantity_3"]');
         var labelText3 = quantity3.querySelector('input ~ .items-start .text-base');
         labelText3.textContent = '18 doses per month';
         labelText3.classList.add('spz_font');
         var labelMonthParent3 = quantity3.querySelector('.frequency-card > .flex .items-end:nth-child(2) > .items-end .per-month-label:nth-child(1)');
         labelMonthParent3.textContent = '3 Packs';
-        var quantity4 = document.querySelector('.spz_rugiet_2003.spzStep4 [data-step="quantity_selection"] label[for="store_order_line_items_attributes_quantity_4"]');
+        var quantity4 = document.querySelector('.spz_test_2003.spzStep4 [data-step="quantity_selection"] label[for="store_order_line_items_attributes_quantity_4"]');
         var labelText4 = quantity4.querySelector('input ~ .items-start .text-base');
         labelText4.textContent = '24 doses per month';
         labelText4.classList.add('spz_font');
         var labelMonthParent4 = quantity4.querySelector('.frequency-card > .flex .items-end:nth-child(2) > .items-end .per-month-label:nth-child(1)');
         labelMonthParent4.textContent = '4 Packs';
-        var quantity1 = document.querySelector('.spz_rugiet_2003.spzStep4 [data-step="quantity_selection"] label[for="store_order_line_items_attributes_quantity_1"]');
+        var quantity1 = document.querySelector('.spz_test_2003.spzStep4 [data-step="quantity_selection"] label[for="store_order_line_items_attributes_quantity_1"]');
         var labelText1 = quantity1.querySelector('input ~ .items-start .text-base');
         labelText1.textContent = '6 doses per month';
         labelText1.classList.add('spz_font');
@@ -404,12 +404,12 @@ function cartStep4Process(){
         run1004Test();
     /*
         step5ContentUpdate();
-        var allInputLabels = document.querySelectorAll('.spz_rugiet_2003 #cart-container label');
+        var allInputLabels = document.querySelectorAll('.spz_test_2003 #cart-container label');
         allInputLabels.forEach(function(inputLabel){
             inputLabel.addEventListener('click', function(){
                 inputLabel.addEventListener('click', function(){
                     var spinnerInterval = setInterval(function () {
-                        var spinner = document.querySelector('.spz_rugiet_2003 .spinner');
+                        var spinner = document.querySelector('.spz_test_2003 .spinner');
                         if(spinner.classList.contains('invisible')){
                             //step5ContentUpdate();
                         }
@@ -426,13 +426,13 @@ function cartStep4Process(){
 function step5ContentUpdate(){
     //console.log('step5ContentUpdate');
     var titleHeadingInterval = setInterval(function () {
-        var titleHeading = document.querySelector('.spz_rugiet_2003 #cart-container h1');
+        var titleHeading = document.querySelector('.spz_test_2003 #cart-container h1');
         if(titleHeading.textContent != 'Cart'){
             titleHeading.textContent = 'Cart';
             titleHeading.classList.add('spz_cart_title');
             
-            var descriptionText = document.querySelector('.spz_rugiet_2003.spzStep5 [data-controller="store--cart--summary"] .relative > .flex > .leading-normal:nth-child(10)');
-            descriptionText.textContent = 'Your information will be reviewed by a doctor to make sure Rugiet is medically appropriate for you.  You will only be charged if a prescription is written and the product ships.  Until then, a temporary hold will be placed on your card.';
+            var descriptionText = document.querySelector('.spz_test_2003.spzStep5 [data-controller="store--cart--summary"] .relative > .flex > .leading-normal:nth-child(10)');
+            descriptionText.textContent = 'Your information will be reviewed by a doctor to make sure test is medically appropriate for you.  You will only be charged if a prescription is written and the product ships.  Until then, a temporary hold will be placed on your card.';
             descriptionText.classList.add('spz_cart_description');
         }
     });
@@ -491,10 +491,10 @@ function thankyouStep8Process(){
             [data-controller="id-verification store--cart--clear-checkout-address"] 
             data-id-verification-persona-environment="sandbox"
             `;
-            var titleHeading = document.querySelector('.spz_rugiet_2003.spzStep8 [data-controller="id-verification store--cart--clear-checkout-address"] > .relative > .font-termina.font-bold');
+            var titleHeading = document.querySelector('.spz_test_2003.spzStep8 [data-controller="id-verification store--cart--clear-checkout-address"] > .relative > .font-termina.font-bold');
             titleHeading.textContent = 'Thank you!';
     
-            var appendTarget = document.querySelector('.spz_rugiet_2003.spzStep8 [data-controller="id-verification store--cart--clear-checkout-address"] > .relative');
+            var appendTarget = document.querySelector('.spz_test_2003.spzStep8 [data-controller="id-verification store--cart--clear-checkout-address"] > .relative');
     
             var questionnairesID = localStorage.getItem("questionnairesID");
             //console.log('questionnairesID: '+ questionnairesID);
@@ -529,7 +529,7 @@ function thankyouStep8Process(){
             localStorage.setItem("pageTracking", 23);
             document.body.classList.add('spzStep23');
             document.body.classList.add('verify_page');
-            var titleHeadin23 = document.querySelector('.spz_rugiet_2003.spzStep23 [data-controller="id-verification store--cart--clear-checkout-address"] > .relative > .font-termina.font-bold');
+            var titleHeadin23 = document.querySelector('.spz_test_2003.spzStep23 [data-controller="id-verification store--cart--clear-checkout-address"] > .relative > .font-termina.font-bold');
             titleHeadin23.textContent = 'Last step: Verify your ID';
             
             localStorage.setItem("allQuestionsDone", 'true');
@@ -545,9 +545,9 @@ function run1004Test(){
 
             waitForElm('body').then(function () {
                 var bodyEle = document.querySelector('body');
-                if (!bodyEle.classList.contains('rugiet_1004')) {
+                if (!bodyEle.classList.contains('test_1004')) {
                     waitForElm('#cart-container').then(function(){
-                        bodyEle.classList.add('rugiet_1004');
+                        bodyEle.classList.add('test_1004');
                         variantChanges1004();
                         getData();
                         
@@ -557,9 +557,9 @@ function run1004Test(){
                                 document.querySelector('body').classList.remove('lock_labels');
                             }, 2500);
                             var checkStr1 = setInterval(function() {                
-                                if(jQuery('.rugiet_1004 .questionnaire-container .spinner.invisible').length > 0) {
+                                if(jQuery('.test_1004 .questionnaire-container .spinner.invisible').length > 0) {
                                     clearInterval(checkStr1);
-                                    if(jQuery('.bg-rugietmustard input[name="subscription_type_id"]').val() == jQuery('input[name="subscription_type_id"]:checked').val()){
+                                    if(jQuery('.bg-testmustard input[name="subscription_type_id"]').val() == jQuery('input[name="subscription_type_id"]:checked').val()){
                                         var promo_cta_sec = document.querySelector(".promo_cta_sec");
                                         if(!promo_cta_sec){
                                             variantChanges1004();
@@ -601,7 +601,7 @@ function variantChanges1004(){
             promo_info.classList.add('promo_info');
             var form_sec = document.querySelector("#financial-summary + div form");
             insertAfter(form_sec, promo_cta);
-            var promo_sec = document.querySelector(".rugiet_1004 .promo_cta_sec");
+            var promo_sec = document.querySelector(".test_1004 .promo_cta_sec");
             insertAfter(promo_sec, promo_info);
             document.querySelector('#financial-summary + div form input[type=text]').placeholder = '';
             let org_html = document.querySelector('#financial-summary + div form input[type=text]');
@@ -613,10 +613,10 @@ function variantChanges1004(){
             var input_wrap = document.querySelector(".input_wrap input");
             insertAfter(input_wrap, input_label);
             jQuery('.promo_cta_wrap').on('click','.promo_cta',function () {
-                jQuery('.rugiet_1004 #financial-summary + div form').addClass('show_promo');
-                jQuery('.rugiet_1004 .promo_cta').addClass('hidecta');
-                jQuery('.rugiet_1004 .promo_info_txt').addClass('info_show');
-                jQuery('.rugiet_1004 #financial-summary').addClass('show_promo');
+                jQuery('.test_1004 #financial-summary + div form').addClass('show_promo');
+                jQuery('.test_1004 .promo_cta').addClass('hidecta');
+                jQuery('.test_1004 .promo_info_txt').addClass('info_show');
+                jQuery('.test_1004 #financial-summary').addClass('show_promo');
             });
             jQuery('#cart-container > .relative > .flex >.flex:nth-child(1)').addClass('cart_items');
             document.querySelector('#cart-container > .relative > .flex').classList.add('cart-row');
@@ -713,7 +713,7 @@ function variantChanges1004(){
                     para.parentElement.classList.add('cart-total-row');
                 }
             })
-            document.querySelectorAll('.rugiet_1004 .cart-row #financial-summary .flex .flex .flex').forEach(function(col){
+            document.querySelectorAll('.test_1004 .cart-row #financial-summary .flex .flex .flex').forEach(function(col){
                 col.querySelectorAll('p').forEach(function(par){
                     if(par.textContent.indexOf(':') > -1){
                         par.textContent = par.textContent.replace(":", "");
@@ -788,7 +788,7 @@ function variantChanges1004(){
     });
 }
 function variantChanges1009(){
-    if(jQuery('.bg-rugietmustard input[id=subscription_type_id_2]:checked').length > 0){
+    if(jQuery('.bg-testmustard input[id=subscription_type_id_2]:checked').length > 0){
         jQuery('label[for="subscription_type_id_1"]').click();
         jQuery('input[id=subscription_type_id_1]').click();  
         setTimeout(() => {
