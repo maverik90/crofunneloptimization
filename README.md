@@ -18,7 +18,6 @@ This project implements a downfunnel optimization for the user onboarding and qu
 - **Automated Actions**: Some steps are automated for efficiency.
 
 ## Flow Chart
-*Add your flow chart image here:*
 
 ```
 
