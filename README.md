@@ -25,4 +25,4 @@ This project implements a downfunnel optimization for the user onboarding and qu
 ```
 
 ---
-*For more details, see the JavaScript logic in `rugiet-2003-script.js`.*
+*For more details, see the JavaScript logic in `crodf-2003-script.js`.*
